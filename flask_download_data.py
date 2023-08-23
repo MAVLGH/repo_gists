@@ -44,20 +44,20 @@ def root():
 
 @app.route('/download-pdf')
 def download_pdf():
-    _path = './data/data_to_overwrite.pdf'
-    save_pdf(10, 1000, _path)
+    print('download_pdf')
     try:
+        file_name = 'my_file.pdf'
+        _path = f'./data/{file_name}'
+        save_pdf(10, 1000, _path)
         r = send_file(
             path_or_file=_path,
             as_attachment=True,
-            download_name='my_file.pdf',
+            download_name=file_name,
             mimetype='application/pdf'
         )
     except Exception as e:
         print(e)
     return r
-
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
