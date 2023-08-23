@@ -16,7 +16,8 @@ libsqlite3-dev \
 tk-dev \
 libssl-dev \
 openssl \
-libffi-dev
+libffi-dev \
+liblzma-dev
 curl https://pyenv.run | bash
 export PATH="/home/$(whoami)/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
