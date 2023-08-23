@@ -46,7 +46,7 @@ def root():
 def download_pdf():
     print('download_pdf')
     try:
-        file_name = 'my_file.pdf'
+        file_name = 'my_file_from_flask.pdf'
         _path = f'./data/{file_name}'
         save_pdf(10, 1000, _path)
         r = send_file(
