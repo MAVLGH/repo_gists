@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get install \
 git \
 gcc \
@@ -19,7 +21,7 @@ openssl \
 libffi-dev \
 liblzma-dev
 curl https://pyenv.run | bash
-export PATH="/home/$(whoami)/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+echo 'export PATH="/home/$(whoami)/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 source ~/.bashrc

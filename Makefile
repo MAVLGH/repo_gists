@@ -11,3 +11,6 @@ reqs_install:
 	python -m pip install --upgrade pip
 	pip install -r requirements.txt
 	pip freeze > reqs_freeze.txt
+
+run_solution:
+	python flask_download_data.py
